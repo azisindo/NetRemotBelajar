@@ -25,8 +25,19 @@ namespace DemoCs
                 Console.WriteLine("Demo Class : setting Value to {0}", InputValue);
             }
             
+            public void SetMessage(string InputMessage)
+            {
+                Message = InputMessage;
+                Console.WriteLine("Demo Class : Setting Message to {0}", InputMessage);
+            }
 
-
+            public InformationBucket GetCurrentInformation()
+            {
+                InformationBucket Bucket = new InformationBucket();
+                Bucket.Message = Message;
+                Bucket.Value = Value;
+                return Bucket;
+            }
 
         }
 
